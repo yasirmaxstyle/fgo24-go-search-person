@@ -5,19 +5,7 @@ import (
 	"strings"
 )
 
-func searchPerson(name string) []string {
-	users := []string{
-		"Leanne Graham",
-		"Ervin Howell",
-		"Clementine Bauch",
-		"Patricia Lebsack",
-		"Chelsey Dietrich",
-		"Mrs. Dennis Schulist",
-		"Kurtis Weissnat",
-		"Nicholas Runolfsdottir V",
-		"Glenna Reichert",
-		"Clementina DuBuque",
-	}
+func searchPerson(name string, users []string) []string {
 
 	found := []string{}
 
@@ -31,5 +19,17 @@ func searchPerson(name string) []string {
 }
 
 func main() {
-	fmt.Println(searchPerson("clem"))
+	users := []string{
+		"Leanne Graham",
+		"Ervin Howell",
+		"Clementine Bauch",
+		"Patricia Lebsack",
+		"Chelsey Dietrich",
+		"Mrs. Dennis Schulist",
+		"Kurtis Weissnat",
+		"Nicholas Runolfsdottir V",
+		"Glenna Reichert",
+		"Clementina DuBuque",
+	}
+	fmt.Println(searchPerson("clem", users))
 }
