@@ -2,21 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"search-person/utils"
 )
-
-func searchPerson(name string, users []string) []string {
-
-	found := []string{}
-
-	for x := range users {
-		if strings.Contains(strings.ToLower(users[x]), strings.ToLower(name)) {
-			found = append(found, users[x])
-		}
-	}
-
-	return found
-}
 
 func main() {
 	users := []string{
@@ -31,5 +18,5 @@ func main() {
 		"Glenna Reichert",
 		"Clementina DuBuque",
 	}
-	fmt.Println(searchPerson("clem", users))
+	fmt.Println(utils.SearchPerson("clem", users))
 }
